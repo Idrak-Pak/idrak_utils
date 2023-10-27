@@ -28,10 +28,11 @@ def find_most_similar(item='',array=[],threshold=60):
     most_similar = ratios[0]
 
     # Check if the similarity ratio is above a certain threshold
-    if most_similar[1] >= 60:
+    if most_similar[1] >= threshold:
         return most_similar[0],most_similar[1]
     else:
-        return "Item not found",most_similar[1]
+        return None,most_similar[1]
+        #item not found, most_similar
 
 
 def convert_numbers_to_words(string):
